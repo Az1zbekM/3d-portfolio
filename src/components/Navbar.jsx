@@ -12,6 +12,14 @@ const Navbar = () => {
 			</NavLink>
 			<nav className='flex gap-7 text-lg  font-medium'>
 				<NavLink
+					to={'/'}
+					className={({ isActive }) =>
+						isActive ? ' text-black' : 'text-black'
+					}
+				>
+					Home
+				</NavLink>
+				<NavLink
 					to={'/about'}
 					className={({ isActive }) =>
 						isActive ? ' text-blue-500' : 'text-black'
@@ -25,12 +33,12 @@ const Navbar = () => {
 						isActive ? ' text-blue-500' : 'text-black'
 					}
 				>
-                    Projects
+					Projects
 				</NavLink>
 				<NavLink
 					to={'/contact'}
 					className={({ isActive }) =>
-						isActive ? ' text-blue-500' : 'text-black'	
+						isActive ? ' text-blue-500' : 'text-black'
 					}
 				>
 					Contact
